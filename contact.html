@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About | Optimo Tech</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+  <!-- Sidebar -->
+  <aside class="sidebar">
+    <div class="logo-area">
+      <img src="https://i.ibb.co/v69ty7dK/a8c60a3a-2b87-444b-92ba-5a7728bee3a4.jpg" alt="Optimo Tech Logo" class="logo">
+      <h2>Optimo Tech</h2>
+    </div>
+
+    <nav class="menu">
+      <ul>
+        <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+        <li><a href="portfolio.html"><i class="fas fa-briefcase"></i> Portfolio</a></li>
+        <li><a href="services.html"><i class="fas fa-cogs"></i> Services</a></li>
+        <li><a href="about.html"><i class="fas fa-users"></i> About Us</a></li>
+        <li><a href="contact.html" class="active"><i class="fas fa-briefcase"></i> Contact</a></li>
+      </ul>
+    </nav>
+
+    <div class="sidebar-footer">
+      <p>© 2025 Optimo Tech</p>
+    </div>
+  </aside>
+
+<main class="content">
+    <section id="contact" class="contact-section">
+  <div class="contact-container">
+    <h2>Contact Us</h2>
+    <p>We’d love to hear from you. Fill out the form below and our team will get back to you soon.</p>
+
+    <!-- Contact Form -->
+    <form id="contact-form" action="#" method="POST">
+      <input type="text" id="name" name="name" placeholder="Your Name" required />
+      <input type="email" id="email" name="email" placeholder="Your Email" required />
+      <textarea id="message" name="message" rows="5" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+
+    <!-- Contact Info Below Form -->
+    <div class="contact-info">
+      <div class="info-box">
+        <i class="fas fa-envelope"></i>
+        <h4>Email:</h4>
+        <p>support@optimotech.com</p>
+      </div>
+
+      <div class="info-box">
+        <i class="fas fa-phone"></i>
+        <h4>Phone:</h4>
+        <p>+92 300 1234567</p>
+      </div>
+
+      <div class="info-box">
+        <i class="fas fa-globe"></i>
+        <h4>Follow Us:</h4>
+        <div class="social-links">
+         <a href="https://www.youtube.com/" target="_blank" title="YouTube"><i class="fab fa-youtube"></i></a>
+          <a href="https://www.instagram.com/" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="https://www.tiktok.com/" target="_blank" title="TikTok"><i class="fab fa-tiktok"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+  <!-- Font Awesome for icons -->
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+<!-- EmailJS Script -->
+<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+<script>
+  (function(){
+      emailjs.init("jl5kZhVwGrYsVE67S"); // ✅ Your Public Key
+  })();
+
+  document.getElementById("contact-form").addEventListener("submit", function(event) {
+    event.preventDefault();
+
+    emailjs.sendForm("service_9u0x8vb", "template_cq6np9i", this)
+      .then(() => {
+        document.getElementById("form-status").innerText = "✅ Message sent successfully!";
+        this.reset();
+      }, (error) => {
+        document.getElementById("form-status").innerText = "❌ Failed to send message. Please try again.";
+        console.error("EmailJS Error:", error);
+      });
+  });
+</script>
+
+
+      
+</body>
+</html>
