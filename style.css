@@ -1019,5 +1019,23 @@ footer {
   }
 }
 
+/* 📱 Sidebar Icons Only in Mobile View */
+@media (max-width: 768px) {
+  .sidebar ul li a {
+    font-size: 1.4rem;
+  }
+
+  /* Hide text, keep icons only */
+  .sidebar ul li a span {
+    display: none;
+  }
+
+  /* Center icons properly */
+  .sidebar ul {
+    justify-content: space-evenly;
+    width: 100%;
+  }
+}
+
 
 
