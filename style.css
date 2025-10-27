@@ -937,117 +937,6 @@ footer {
   }
 }
 
-/* ======= Mobile / Tablet Responsive Fix (paste at end of style.css) ======= */
-@media (max-width: 992px) {
-  /* Make sidebar act as top bar on small screens */
-  .sidebar {
-    position: relative;
-    width: 100%;
-    height: auto;
-    padding: 15px 10px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-wrap: nowrap;
-    border-right: none;
-    border-bottom: 1px solid rgba(255,255,255,0.03);
-  }
-
-  .sidebar .logo-area {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    margin: 0;
-  }
-
-  .sidebar .logo {
-    width: 56px;
-    height: 56px;
-    object-fit: cover;
-  }
-
-  .sidebar h2 {
-    display: none; /* hide full title to save space */
-  }
-
-  /* collapse nav into horizontal small row */
-  .nav-links {
-    display: flex;
-    gap: 8px;
-    align-items: center;
-    margin: 0;
-    padding: 0;
-  }
-
-  .nav-links li {
-    margin: 0;
-    list-style: none;
-  }
-
-  .nav-links a {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    padding: 8px 10px;
-    font-size: 0.95rem;
-  }
-
-  /* Ensure main content uses full width */
-  .content, .home, main {
-    margin-left: 0 !important; /* important to override desktop margin-left */
-    width: 100% !important;
-    padding: 20px !important;
-  }
-
-  /* hero/main specific */
-  .company-logo {
-    width: 110px;
-    margin-bottom: 12px;
-  }
-
-  .company-name {
-    font-size: 1.8rem;
-  }
-
-  .slogan {
-    font-size: 1rem;
-  }
-
-  /* Cards, portfolio, services full width on mobile */
-  .service-card, .video-card, .card, .portfolio-card {
-    width: 100% !important;
-    margin: 12px 0;
-    padding: 18px;
-  }
-
-  /* Footer */
-  footer {
-    position: relative;
-    padding: 18px 12px;
-    text-align: center;
-  }
-
-  /* Make iframe / videos responsive */
-  .video-wrapper iframe, iframe, video {
-    width: 100% !important;
-    height: auto !important;
-    min-height: 180px;
-  }
-
-  /* ensure spacing for contact section */
-  .contact-section .contact-container, .contact-container {
-    max-width: 100%;
-    padding: 10px;
-  }
-}
-
-/* safety: small screens extra */
-@media (max-width: 480px) {
-  .company-name { font-size: 1.5rem; }
-  .company-logo { width: 90px; }
-  .nav-links a { font-size: 0.9rem; padding: 6px 8px; }
-}
-
 /* ✅ FINAL RESPONSIVE FIX FOR ALL DEVICES */
 @media (max-width: 768px) {
 
@@ -1129,5 +1018,6 @@ footer {
     padding: 15px;
   }
 }
+
 
 
