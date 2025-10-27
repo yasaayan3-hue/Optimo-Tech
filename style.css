@@ -1037,5 +1037,30 @@ footer {
   }
 }
 
+/* 🛰️ Sidebar Logo Fix */
+.logo-area {
+  text-align: center;
+  padding: 20px 20px;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.logo-area img.logo {
+  width: 120px;          /* Adjust logo size */
+  height: 120px;         /* Perfect square */
+  object-fit: contain;   /* Image cut na ho */
+  border-radius: 100%;    /* Round logo */
+  margin: 0 auto;
+  display: block;
+}
+
+.logo-area h2 {
+  font-size: 1.2rem;
+  color: white;
+  margin-top: 10px;
+  font-weight: 600;
+  text-shadow: 0 0 10px rgba(255,255,255,0.4);
+}
+
+
 
 
