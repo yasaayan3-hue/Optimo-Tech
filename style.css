@@ -936,3 +936,151 @@ footer {
     text-shadow: 0 0 20px #0026ff, 0 0 40px #0026ff, 0 0 60px #0026ff;
   }
 }
+
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: #0a0a0a;
+  color: #f0f0f0;
+  display: flex;
+  min-height: 100vh;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 250px;
+  background: #111;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 30px;
+  position: fixed;
+  height: 100%;
+}
+
+.sidebar .logo-area {
+  text-align: center;
+}
+
+.sidebar .logo {
+  width: 100px;
+  border-radius: 50%;
+}
+
+.sidebar h2 {
+  font-size: 1.5rem;
+  color: #00ffe0;
+  margin: 10px 0;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  width: 100%;
+  text-align: center;
+}
+
+.sidebar ul li {
+  margin: 15px 0;
+}
+
+.sidebar ul li a {
+  color: #bbb;
+  text-decoration: none;
+  font-size: 1.1rem;
+  transition: color 0.3s;
+}
+
+.sidebar ul li a:hover,
+.sidebar ul li a.active {
+  color: #00ffe0;
+}
+
+/* Main Content */
+.home {
+  margin-left: 260px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  padding: 40px;
+  width: calc(100% - 260px);
+}
+
+.company-logo {
+  width: 150px;
+  border-radius: 50%;
+  margin-bottom: 20px;
+}
+
+.company-name {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+/* Glow effect */
+.glow {
+  color: #00ffe0;
+  text-shadow: 0 0 10px #00ffe0, 0 0 20px #00ffe0, 0 0 40px #00ffe0;
+}
+
+.slogan {
+  font-size: 1.1rem;
+  color: #ccc;
+  margin-bottom: 30px;
+}
+
+.benefits {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 600px;
+}
+
+/* Footer */
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background: #0d0d0d;
+  text-align: center;
+  padding: 15px 0;
+  font-size: 0.9rem;
+  color: #aaa;
+  border-top: 1px solid #222;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  body {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    position: relative;
+    width: 100%;
+    height: auto;
+    flex-direction: column;
+  }
+
+  .home {
+    margin-left: 0;
+    width: 100%;
+    padding: 20px;
+  }
+
+  .company-logo {
+    width: 120px;
+  }
+
+  .company-name {
+    font-size: 2rem;
+  }
+
+  footer {
+    position: relative;
+  }
+}
+
